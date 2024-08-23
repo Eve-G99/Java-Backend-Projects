@@ -33,11 +33,14 @@ This is a Spring Boot application that interacts with the [Hipolabs University A
 
 3. Access the APIs:
 
-   - **Get Universities by Country**: 
+   - **Get Universities by Country**:
      - `GET http://localhost:8080/universities?country=United+Kingdom`
-   - **Get Universities for Multiple Countries**: 
+   - **Get Universities for Multiple Countries**:
+
      - `POST http://localhost:8080/universities` with a JSON body:
+
      ```json
+
      ["United Kingdom", "Germany", "France"]
      ```
 
@@ -50,3 +53,11 @@ Retrieve a list of universities by specifying a country.
 **Query Parameters**:
 
 - `country` (required): The name of the country.
+
+### `POST /universities`
+
+Retrieve universities from multiple countries concurrently.
+
+**Request Body**:
+
+- A JSON array of country names.
